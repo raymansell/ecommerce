@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -49,6 +50,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
+    historyApiFallback: true,
     open: true,
   },
   devtool: 'source-map',
