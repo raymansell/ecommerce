@@ -142,6 +142,9 @@
   border-radius: 8px;
   text-transform: uppercase;
   transition: 0.5s;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .product-card:hover .buy {

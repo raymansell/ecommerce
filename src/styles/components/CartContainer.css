@@ -1,5 +1,4 @@
 .cart {
-  min-height: 90vh;
   width: 90%;
   margin: 0 auto;
   margin-top: 40px;
@@ -16,7 +15,6 @@
 
 .empty-cart {
   text-transform: lowercase;
-  color: red;
   margin-top: 1rem;
   text-align: center;
 }
@@ -65,7 +63,6 @@
 }
 
 .remove-btn {
-  /* color: red; */
   color: #fff;
   letter-spacing: 3px;
   cursor: pointer;
@@ -82,6 +79,7 @@
   width: 1.5rem;
   background: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 .amount-btn svg {
