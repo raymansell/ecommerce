@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
 import CartItem from './CartItem';
+import { getTotalPrice } from '../../utils';
 import '../../styles/components/CartContainer.css';
 
 const CartContainer = () => {
   const {
     state: { cart },
   } = useAppContext();
-
-  const getTotalPrice = () => {
-    return cart.reduce((acc, curr) => {
-      return acc + curr.price * curr.amount;
-    }, 0);
-  };
 
   if (cart.length === 0) {
     return (
@@ -40,7 +35,7 @@ const CartContainer = () => {
         <hr />
         <div className='cart-total'>
           <h4>
-            total <span>${`${getTotalPrice()}`}</span>
+            total <span>${`${getTotalPrice(cart)}`}</span>
           </h4>
         </div>
         <Link to='/checkout/information'>

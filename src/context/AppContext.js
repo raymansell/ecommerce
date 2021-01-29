@@ -7,8 +7,6 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  // const fetchProducts = () => {}; mejor en el home xd
-
   const addItemToCart = (item) => {
     dispatch({ type: ACTIONS.ADD_TO_CART, payload: { item } });
   };
@@ -21,9 +19,24 @@ const AppProvider = ({ children }) => {
     dispatch({ type: ACTIONS.TOGGLE_AMOUNT, payload: { id, type } });
   };
 
+  const setBuyer = (buyer) => {
+    dispatch({ type: ACTIONS.SET_BUYER, payload: { buyer } });
+  };
+
+  const addNewOrder = (order) => {
+    dispatch({ type: ACTIONS.ADD_NEW_ORDER, payload: { order } });
+  };
+
   return (
     <AppContext.Provider
-      value={{ state, addItemToCart, removeItemFromCart, toggleAmount }}
+      value={{
+        state,
+        addItemToCart,
+        removeItemFromCart,
+        toggleAmount,
+        setBuyer,
+        addNewOrder,
+      }}
     >
       {children}
     </AppContext.Provider>
