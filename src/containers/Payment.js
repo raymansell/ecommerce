@@ -9,6 +9,7 @@ const Payment = () => {
   const {
     state: { cart, buyer },
     addNewOrder,
+    clearCart,
   } = useAppContext();
 
   const paypalOptions = {
@@ -31,6 +32,7 @@ const Payment = () => {
         payment: data,
       };
       addNewOrder(newOrder);
+      clearCart();
       history.push('/checkout/success');
     }
   };

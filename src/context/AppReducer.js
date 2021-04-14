@@ -1,6 +1,7 @@
 const ACTIONS = {
   ADD_TO_CART: 'add-to-cart',
   REMOVE_FROM_CART: 'remove-from-cart',
+  CLEAR_CART: 'clear-cart',
   TOGGLE_AMOUNT: 'toggle-amount',
   SET_BUYER: 'set-buyer',
   ADD_NEW_ORDER: 'add-new-order',
@@ -15,6 +16,12 @@ const AppReducer = (state, action) => {
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload.id),
+      };
+    }
+    case ACTIONS.CLEAR_CART: {
+      return {
+        ...state,
+        cart: [],
       };
     }
     case ACTIONS.TOGGLE_AMOUNT: {

@@ -15,6 +15,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: ACTIONS.REMOVE_FROM_CART, payload: { id } });
   };
 
+  const clearCart = () => {
+    dispatch({ type: ACTIONS.CLEAR_CART });
+  };
+
   const toggleAmount = (id, type) => {
     dispatch({ type: ACTIONS.TOGGLE_AMOUNT, payload: { id, type } });
   };
@@ -33,6 +37,7 @@ const AppProvider = ({ children }) => {
         state,
         addItemToCart,
         removeItemFromCart,
+        clearCart,
         toggleAmount,
         setBuyer,
         addNewOrder,
