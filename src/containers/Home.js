@@ -1,7 +1,7 @@
 // import initialState from '../initialState';
 import Products from '../components/Shop/Products';
 import { useAppContext } from '../context/AppContext';
-import '../styles/components/Home.css';
+import '../assets/styles/components/Home.css';
 
 const Home = () => {
   const {

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import '../styles/components/Information.css';
+import '../assets/styles/components/Information.css';
 
 const Information = () => {
   const {
@@ -53,8 +53,12 @@ const Information = () => {
             <div className='Information-back'>Go back</div>
           </Link>
 
-          <div className='Information-next'>
-            <button type='button' onClick={handleSubmit}>
+          <div>
+            <button
+              className='Information-next'
+              type='button'
+              onClick={handleSubmit}
+            >
               Buy Now
             </button>
           </div>

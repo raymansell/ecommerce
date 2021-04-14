@@ -2,7 +2,7 @@ import { PayPalButton } from 'react-paypal-button-v2';
 import { useHistory } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 import { getTotalPrice } from '../utils';
-import '../styles/components/Payment.css';
+import '../assets/styles/components/Payment.css';
 
 const Payment = () => {
   const history = useHistory();
@@ -40,7 +40,7 @@ const Payment = () => {
   return (
     <div className='Payment'>
       <div className='Payment-content'>
-        <h3>Order resumen</h3>
+        <h3>Order details</h3>
         {cart.map((item) => (
           <div key={item.id} className='Payment-item'>
             <div className='Payment-element'>

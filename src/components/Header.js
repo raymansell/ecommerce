@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { FiShoppingCart } from 'react-icons/fi';
 import { useAppContext } from '../context/AppContext';
-import '../styles/components/Header.css';
+import '../assets/styles/components/Header.css';
+import logo from '../assets/static/logo.svg';
 
 const Header = () => {
   const {
@@ -14,7 +15,10 @@ const Header = () => {
     <header className='header-container'>
       <div className='header-content'>
         <Link to='/'>
-          <div className='logo'>Logo</div>
+          <div className='logo'>
+            <img src={logo} alt='three dots' />
+            <p className='brand'>lozzby</p>
+          </div>
         </Link>
         <nav className='nav'>
           <ul>

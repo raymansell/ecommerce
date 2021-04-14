@@ -1,7 +1,7 @@
 import { useAppContext } from '../../context/AppContext';
-import '../../styles/components/Product.css';
+import '../../assets/styles/components/Product.css';
 
-const Product = ({ id, image, title, price, description }) => {
+const Product = ({ id, image, title, price, brand }) => {
   const {
     state: { cart },
     addItemToCart,
@@ -14,13 +14,9 @@ const Product = ({ id, image, title, price, description }) => {
   };
 
   return (
-    <div className='product-card'>
+    <div className='product-card' data-content={brand}>
       <div className='img-container'>
-        <img
-          // src='https://assets.products-live.ao.com/Images/6a683729-47cd-4078-8f3c-3e7acf16eeab/520x520/508337_sennheiser_headphones_01.png'
-          src={image}
-          alt={title}
-        />
+        <img src={image} alt={title} />
       </div>
       <div className='product-info'>
         <h3>{title}</h3>

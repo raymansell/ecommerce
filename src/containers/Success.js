@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
 import { useAppContext } from '../context/AppContext';
 import useGeocoding from '../hooks/useGeocoding';
-import '../styles/components/Success.css';
+import '../assets/styles/components/Success.css';
 
 const Success = () => {
   const {

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
 import CartItem from './CartItem';
 import { getTotalPrice } from '../../utils';
-import '../../styles/components/CartContainer.css';
+import '../../assets/styles/components/CartContainer.css';
 
 const CartContainer = () => {
   const {

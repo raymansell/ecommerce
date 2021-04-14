@@ -8,7 +8,7 @@ import {
   Success,
   NotFound,
 } from '../containers';
-import '../styles/App.css';
+import '../assets/styles/App.css';
 
 const App = () => {
   return (
